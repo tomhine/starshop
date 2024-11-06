@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run php-cs-fixer with any optional provided arguments
+## Usage: phpcs
+## Example: ddev phpcs
+
+./vendor/bin/php-cs-fixer "$0"
