@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Starshop | Beam up some parts!{% endblock %}
+
+{% block body %}
+    <h1>Hello, {{ name | default('Stranger') }}!</h1>
+
+    {% if starshipCount %}
+        <h2>You have {{ starshipCount }} starships.</h2>
+    {% endif %}
+
+    {% if ship %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{ ship.name }}</td>
+            </tr>
+            <tr>
+                <th>Crew</th>
+                <td>{{ ship.crew }}</td>
+            </tr>
+            <tr>
+                <th>Captain</th>
+                <td>{{ ship.captain|upper }}</td>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <td>{{ ship.model }}</td>
+            </tr>
+        </table>
+    {% endif %}
+{% endblock %}

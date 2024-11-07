@@ -11,6 +11,15 @@ class MainController extends AbstractController
     #[Route('/')]
     public function home(): Response
     {
-        return new Response('Hello World!');
+        $starshipCount = 457;
+
+        $ship = [
+            'name' => 'Millennium Falcon',
+            'crew' => 5,
+            'captain' => 'Han Solo',
+            'model' => 'YT-1300',
+        ];
+
+        return $this->render('main/home.html.twig', compact('starshipCount', 'ship'));
     }
 }
